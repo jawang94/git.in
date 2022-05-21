@@ -1,11 +1,11 @@
-# git-checkout-interactive
+# git.in
 
-Quick switch between and delte git branches.
+An interactive CLI for commonly annoying git workflows.
 
 ### Install
 
 ```bash
-npm install -g git-checkout-interactive
+npm install -g git.in
 ```
 
 ### Usage
