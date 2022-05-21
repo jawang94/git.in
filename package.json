@@ -25,7 +25,9 @@
   },
   "bin": {
     "gci": "dist/bin/gci.js",
-    "gdi": "dist/bin/gdi.js"
+    "gdi": "dist/bin/gdi.js",
+    "git.in-checkout": "dist/bin/gci.js",
+    "git.in-delete": "dist/bin/gdi.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
