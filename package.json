@@ -1,6 +1,6 @@
 {
   "name": "git-kit-interactive",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Quick switch between and delete git branches",
   "author": {
     "name": "Jason Wang",
@@ -18,14 +18,14 @@
     "node": ">=7.6.0"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist/ && tsc",
     "lint": "eslint src --quiet --ext .ts --cache",
     "dev-gci": "ts-node src/git-checkout-interactive.ts",
     "dev-gdi": "ts-node src/git-delete-interactive.ts"
   },
   "bin": {
-    "gci": "dist/bin/gci.js",
-    "gdi": "dist/bin/gdi.js",
+    "gci2": "dist/bin/gci.js",
+    "gdi2": "dist/bin/gdi.js",
     "git.in-checkout": "dist/bin/gci.js",
     "git.in-delete": "dist/bin/gdi.js"
   },
