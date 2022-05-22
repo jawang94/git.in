@@ -12,7 +12,7 @@ if (opts.indexOf('-h') > -1) {
 } else {
 
   // Starts interactive branch listing and listen for feedback
-  var gci = require('../dist/src/git-checkout-interactive.js')(opts);
+  var gci = require('../dist/src/git-checkout-interactive.js').gitDeleteInteractive(opts);
 
   gci.on('warn', logs.logWarn);
   gci.on('error', logs.logError);
