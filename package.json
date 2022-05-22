@@ -1,7 +1,7 @@
 {
   "name": "@jawang94/git.in",
-  "version": "1.0.18",
-  "description": "Quick switch between and delete git branches",
+  "version": "1.0.19",
+  "description": "Quickly switch between and manage your git branches",
   "repository": "https://github.com/jawang94/git.in",
   "license": "None",
   "author": {
