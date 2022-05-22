@@ -1,20 +1,26 @@
-import helpMessage from '../help';
-import { logInfo, logWarn, logError, logSuccess } from '../utils/logging';
+
+#!/usr/bin/env node
+
+var exec = require('child_process').exec;
+var log = require('simple-output');
+
+const helpMessage = require('../help');
+const logs = require('../utils/logging');
 
 const opts = process.argv.slice(2);
 
 // Prints help message
 if (opts.indexOf('-h') > -1) {
-  logInfo(helpMessage);
+  logs.logInfo(helpMessage);
 
 } else {
 
   // Starts interactive branch listing and listen for feedback
   var gci = require('../git-checkout-interactive.js')(opts);
 
-  gci.on('warn', logWarn);
-  gci.on('error', logError);
-  gci.on('success', logSuccess);
+  gci.on('warn', logs.logWarn);
+  gci.on('error', logs.logError);
+  gci.on('success', logs.logSuccess);
 
   // Exits program execution on ESC keypress
   process.stdin.on('keypress', function (ch, key) {

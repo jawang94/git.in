@@ -18,6 +18,10 @@
   "engines": {
     "node": ">=14.17.0"
   },
+  "files": [
+    "dist",
+    "bin"
+  ],
   "scripts": {
     "build": "rm -rf dist/ && tsc",
     "lint": "eslint src --quiet --ext .ts --cache",

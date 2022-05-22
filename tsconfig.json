@@ -20,5 +20,5 @@
   },
   "lib": ["es2015"],
   "include": ["src"],
-  "ignore": ["dist"]
+  "ignore": ["dist", "bin"]
 }
