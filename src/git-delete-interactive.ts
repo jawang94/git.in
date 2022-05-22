@@ -7,8 +7,8 @@ import { KilledError } from './utils/errors';
 
 const exec = promisify(require('child_process').exec)
 
-export default async function gitDeleteInteractive (options = []) {
-  const { stdout: branches } = await exec(('git branch -v --sort=-committerdate ' + options.join(' ')).trim());
+export default async function gitDeleteInteractive (options?: string[]) {
+  const { stdout: branches } = await exec(('git branch -v --sort=-committerdate ' + options?.join(' ')).trim());
 
   const choices = branches
     .split(/\n/)

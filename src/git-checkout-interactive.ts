@@ -4,8 +4,8 @@ import { logInfo } from './utils/logging'
 
 const exec = promisify(require('child_process').exec)
 
-export default async function gitCheckoutInteractive(options = []) {
-  const { stdout: branches } = await exec(('git branch -v --sort=-committerdate ' + options.join(' ')).trim());
+export default async function gitCheckoutInteractive(options?: string[]) {
+  const { stdout: branches } = await exec(('git branch -v --sort=-committerdate ' + options?.join(' ')).trim());
 
   const choices = branches
     .split(/\n/)

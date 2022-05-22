@@ -1,22 +1,19 @@
 #!/usr/bin/env node
 
-const helpMessage = require('../dist/src/help');
-const logs = require('../dist/src/utils/logging');
+import help from './help';
+import { logInfo } from './utils/logging';
+import gitCheckoutInteractive from './git-checkout-interactive';
 
 const opts = process.argv.slice(2);
 
 // Prints help message
 if (opts.indexOf('-h') > -1) {
-  logs.logInfo(helpMessage);
+  logInfo(help);
 
 } else {
 
   // Starts interactive branch listing and listen for feedback
-  var gci = require('../dist/src/git-checkout-interactive.js').gitDeleteInteractive(opts);
-
-  gci.on('warn', logs.logWarn);
-  gci.on('error', logs.logError);
-  gci.on('success', logs.logSuccess);
+  gitCheckoutInteractive(opts);
 
   // Exits program execution on ESC keypress
   process.stdin.on('keypress', function (ch, key) {
