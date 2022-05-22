@@ -1,7 +1,8 @@
 {
-  "name": "git.in",
+  "name": "@jawang94/git.in",
   "version": "1.0.0",
   "description": "Quick switch between and delete git branches",
+  "repository": "https://github.com/jawang94/git.in",
   "license": "None",
   "author": {
     "name": "Jason Wang",
@@ -15,7 +16,7 @@
     }
   ],
   "engines": {
-    "node": ">=7.6.0"
+    "node": ">=14.17.0"
   },
   "scripts": {
     "build": "rm -rf dist/ && tsc",
