@@ -1,6 +1,6 @@
 {
   "name": "@jawang94/git.in",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Quick switch between and delete git branches",
   "repository": "https://github.com/jawang94/git.in",
   "license": "None",
@@ -71,5 +71,6 @@
     "prettier": "2.3.2",
     "ts-node": "^10.8.0",
     "typescript": "^4.2.4"
-  }
+  },
+  "keywords": ["git.in", "git interactive", "git", "git checkout", "git delete"]
 }
