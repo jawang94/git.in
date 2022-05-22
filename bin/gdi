@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const helpMessage = require('../help');
-const logs = require('../utils/logging');
+const helpMessage = require('../dist/src/help');
+const logs = require('../dist/src/utils/logging');
 
 const opts = process.argv.slice(2);
 
