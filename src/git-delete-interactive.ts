@@ -8,7 +8,7 @@ import { KilledError } from './utils/errors';
 const exec = promisify(require('child_process').exec)
 
 async function run (options = []) {
-  const { stdout: branches } = await exec(('git branch -v --sort=-committerdate -a' + options.join(' ')).trim());
+  const { stdout: branches } = await exec(('git branch -v --sort=-committerdate ' + options.join(' ')).trim());
 
   const choices = branches
     .split(/\n/)
