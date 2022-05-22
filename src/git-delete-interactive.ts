@@ -7,7 +7,7 @@ import { KilledError } from './utils/errors';
 
 const exec = promisify(require('child_process').exec)
 
-async function run (options = []) {
+export default async function gitDeleteInteractive (options = []) {
   const { stdout: branches } = await exec(('git branch -v --sort=-committerdate ' + options.join(' ')).trim());
 
   const choices = branches
@@ -82,13 +82,3 @@ async function deleteBranch (branch: { remote: any; name: any; }) {
     logInfo(`Aborted.`)
   }
 }
-
-function onError (e: { stderr: string | Uint8Array; }) {
-  if (e.stderr) {
-    process.stderr.write(e.stderr)
-  } else {
-    console.error(e)
-  }
-}
-
-run().catch(onError)
