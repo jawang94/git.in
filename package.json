@@ -25,10 +25,10 @@
     "dev-gdi": "ts-node src/git-delete-interactive.ts"
   },
   "bin": {
-    "gci": "dist/bin/gci.js",
-    "gdi": "dist/bin/gdi.js",
-    "git.in-checkout": "dist/bin/gci.js",
-    "git.in-delete": "dist/bin/gdi.js"
+    "gci": "dist/src/bin/gci.js",
+    "gdi": "dist/src/bin/gdi.js",
+    "git.in-checkout": "dist/src/bin/gci.js",
+    "git.in-delete": "dist/src/bin/gdi.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
