@@ -1,6 +1,6 @@
-# git.in
+# git.in(teractive)
 
-An interactive CLI for commonly annoying git workflows.
+An interactive Git CLI for commonly annoying git workflows.
 
 ### Install
 
