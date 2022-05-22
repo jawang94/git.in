@@ -5,7 +5,7 @@ An interactive Git CLI for commonly annoying git workflows.
 ### Install
 
 ```bash
-npm install -g git.in
+npm i -g @jawang94/git.in
 ```
 
 ### Usage
