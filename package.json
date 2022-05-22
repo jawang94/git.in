@@ -1,6 +1,6 @@
 {
   "name": "@jawang94/git.in",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Quick switch between and delete git branches",
   "repository": "https://github.com/jawang94/git.in",
   "license": "None",
@@ -29,10 +29,10 @@
     "dev-gdi": "ts-node src/git-delete-interactive.ts"
   },
   "bin": {
-    "gci": "dist/src/bin/gci.js",
-    "gdi": "dist/src/bin/gdi.js",
-    "git.in-checkout": "dist/src/bin/gci.js",
-    "git.in-delete": "dist/src/bin/gdi.js"
+    "gci": "bin/gci.js",
+    "gdi": "bin/gdi.js",
+    "git.in-checkout": "bin/gci.js",
+    "git.in-delete": "bin/gdi.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
