@@ -2,6 +2,11 @@
 
 An interactive Git CLI for commonly annoying git workflows.
 
+### Currently supported flows
+
+1. Checkout
+2. Delete (multiselect)
+
 ### Install
 
 ```bash
@@ -9,6 +14,11 @@ npm i -g @jawang94/git.in
 ```
 
 ### Usage
+
+```txt
+- gci = interactively checkout a new branch
+- gdi = interactively delete branches (multiselect)
+```
 
 ```bash
 - `gci | gdi` List all local branches

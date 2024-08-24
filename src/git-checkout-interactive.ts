@@ -13,11 +13,11 @@ export default async function gitCheckoutInteractive(options?: Array<string>) {
   const choices = branches
     .split(/\n/)
     .filter((branch: string) => !!branch.trim())
-    .filter((branch: { match: (arg0: RegExp) => [any, any, any] }) => {
+    .filter((branch: { match: (arg0: RegExp) => [string, string, string] }) => {
       const [, , value] = branch.match(/([* ]) +([^ ]+) +(.+)/);
       return value !== 'remotes/origin/HEAD';
     })
-    .map((branch: { match: (arg0: RegExp) => [any, any, any, any] }) => {
+    .map((branch: { match: (arg0: RegExp) => [string, string, string, string] }) => {
       const [, flag, value, hint] = branch.match(/([* ]) +([^ ]+) +(.+)/);
       return {
         disabled: flag === '*',
@@ -33,7 +33,7 @@ export default async function gitCheckoutInteractive(options?: Array<string>) {
     message: 'Switch branch',
     name: 'branch',
     onState({ value }) {
-      this.hint = choices.find((c: { value: any }) => c.value === value).hint;
+      this.hint = choices.find((c: { value: string }) => c.value === value).hint;
     },
     type: 'select',
     warn: 'current branch',
@@ -42,8 +42,10 @@ export default async function gitCheckoutInteractive(options?: Array<string>) {
   await checkout(branch);
 }
 
-async function checkout(branch: { remote: any }) {
-  if (!branch) return;
+async function checkout(branch: { remote: string }) {
+  if (!branch) {
+    return;
+  }
   logInfo(`Deleting ${[]} branch ${branch}...`);
   const { stdout, stderr } = await exec(`git checkout ${branch}`);
   process.stdout.write(stdout);
