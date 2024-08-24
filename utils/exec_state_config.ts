@@ -1,8 +1,8 @@
 type ExecStateConfigT = {
+  interactive?: boolean;
+  noVerify?: boolean;
   outputDebugLogs?: boolean;
   quiet?: boolean;
-  noVerify?: boolean;
-  interactive?: boolean;
 };
 
 /**

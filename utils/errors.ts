@@ -1,5 +1,3 @@
-
-
 class ExitError extends Error {}
 class ExitCancelledError extends ExitError {
   constructor(message: string) {
@@ -20,7 +18,7 @@ class ExitFailedError extends ExitError {
               .split('\n')
               .map((line) => `> ${line}`)
               .join('\n'),
-          ].join('\n')
+          ].join('\n'),
         )
       : super(message);
     this.name = 'ExitFailed';
@@ -34,9 +32,4 @@ class KilledError extends ExitError {
   }
 }
 
-export {
-  ExitError,
-  ExitFailedError,
-  ExitCancelledError,
-  KilledError,
-};
+export { ExitError, ExitFailedError, ExitCancelledError, KilledError };

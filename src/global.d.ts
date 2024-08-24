@@ -1,1 +1,1 @@
-declare module "simple-output" {}
+declare module 'simple-output' {}
